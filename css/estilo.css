@@ -1,0 +1,85 @@
+@font-face {
+    font-family: 'Edu TAS Beginner', cursive;
+    src: url(../assets/fonts/EduTASBeginner-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: 'Roboto Condensed', sans-serif;
+    src: url(../assets/fonts/RobotoCondensed-Regular.ttf);
+}
+
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#titulo{
+    font-family: 'Edu TAS Beginner', cursive;
+    font-size: 40px;
+    color: #17AFF0;
+    letter-spacing: 2px;
+    text-align: end;
+    border: none;
+    background: none;
+}
+
+h1{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 35px;
+    font-style: italic;
+    color: #84D3EC;
+    letter-spacing: 2px;
+    text-align: center;
+    background: #555E61;
+    margin-left: 35%;
+    margin-right: 35%;
+    border: solid black;
+    border-radius: 5px;
+}
+
+#piedepagina{
+    width: 100%;
+    background-color: black;
+    color: rgb(11, 177, 243);
+    padding: 20px 20px;
+
+}
+
+ul{
+    list-style: none;
+    font-size: 0;
+}
+
+li{
+    display: inline-block;
+    width: 25%;
+    position: relative;
+    font-size: 14px;
+}
+
+li a{
+    color: #00B3FF;
+    font-weight: bold;
+    transition: background 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+li a:hover{
+    background-color: lightsteelblue;
+}
+
+h4{
+    font-size: 24px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.nav__list{
+    display: flex;
+    list-style-type: none;
+}
