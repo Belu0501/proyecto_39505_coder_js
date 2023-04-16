@@ -52,8 +52,8 @@ function calcularCostoTotal(productos = []) {
 let costoTotal = calcularCostoTotal(misProductos);
 
 //Usando la función de orden superior MAP
-let nombres = misProductos.map((unProducto) => unProducto.nombre.join(“, ”));
+let nombres = misProductos.map((unProducto) => unProducto.nombre);
 alert("Lista de productos que compró el usuario: " + nombres);
 
 
-alert("El usuario deberá abonar un total de $" + costoTotal.toFixed(2) + "por la compra de " + misProductos.length + " productos.");
+alert("El usuario deberá abonar un total de $" + costoTotal.toFixed(2) + "por la compra de " + misProductos.length + " productos.");git 

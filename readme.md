@@ -9,7 +9,8 @@ Primera Entrega Proyecto Final
 
 ## Documentation
 
-El presente contiene un archivo HTML, con su archivo js, el cual contiene un ciclo For y un If, para demostrar lo aprendido hasta ahora en el curso.
+El presente contiene un archivo HTML, con su archivo js, para demostrar lo aprendido hasta ahora en el curso.
+Cuenta con una estructura If con su ciclo For. Para la segunda Pre-Entrega agregué Funciones, Objetos y Arrays y la Función de Orden Superior Map.
 
 ## Feedback
 
