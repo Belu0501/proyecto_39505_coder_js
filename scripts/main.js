@@ -1,59 +1,80 @@
-let localidad = prompt("Si sos de San Justo, ingresa 1. Si sos de Ramos Mejia, ingresa 2. Si sos de Moron, ingresa 3. Si no perteneces a ninguna de estas zonas, ingresa 0.");
-const localidadSANJUSTO = 1
-const localidadRAMOSMEJIA = 2
-const localidadMORON = 3
-const localidadLEJANA = 0
 
-if (localidad == localidadSANJUSTO) {
-    alert("Buenísimo! Los envíos son sin costo a la localidad de San Justo :D");
-} else if (localidad == localidadRAMOSMEJIA) {
-    alert("Los envíos a la localidad de Ramos Mejia tienen un valor adicional de $150.");
-} else if (localidad == localidadMORON) {
-    alert("Los envíos a la localidad de Moron tienen un valor adicional de $250.");
-} else if (localidad == localidadLEJANA) {
-    alert("Lástima, por el momento no realizamos envíos por tu zona.");
-}
-else {
-    alert("La respuesta ingresada no es válida.")
-}
+localStorage.setItem('productos', JSON.stringify( productosLista ) );
 
-let numeroEnvios = 3;
-for (let envio = 1; envio <= numeroEnvios; envio++) {
-    let nombre = prompt("¿Cómo se llama la persona que realizó el pedido " + envio + "?");
-    alert("Realizó el pedido " + nombre + ", tiene asignado el envío número " + envio);
-    console.log("Realizó el pedido " + nombre + ", tiene asignado el envío número " + envio);
+let productosjson = JSON.parse( localStorage.getItem( 'productos' ) );
+
+for (const producto of productosjson) {
+    let contenedor = document.createElement("div");
+    //Definimos el innerHTML del elemento con una plantilla de texto
+    contenedor.innerHTML = `<h3>  Producto: ${producto.nombre}</h3>
+                            <b> $ ${producto.precio}</b>
+                            <p> ${producto.descripcion}</p>
+                            <button type="button" id="btn${producto.id}" class="btn btn-primary" 
+                            style='color: white;background-color: #223137;border-radius: 10px;'>
+                            agregar al carrito
+                        </button>`;
+    document.body.appendChild(contenedor);
 }
 
-//Acá empieza lo que sumé para la Pre-Entrega nº2
+var alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+var btnComprar1 = document.getElementById('btn1')
+var btnComprar2 = document.getElementById('btn2')
+var btnComprar3 = document.getElementById('btn3')
+var btnComprar4 = document.getElementById('btn4')
 
-class Producto {
-    constructor(nombre, precio) {
-        this.nombre = nombre.toUpperCase();
-        this.precio = parseFloat(precio);
-    }
+function alert(message, type) {
+  var wrapper = document.createElement('div')
+  wrapper.innerHTML = '<div class="alert alert-' + type + ' alert-dismissible" role="alert">' + message + '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'
+
+  alertPlaceholder.append(wrapper)
 }
 
-let misProductos = [
-    new Producto("Pampers Premium RN x36un", 2220),
-    new Producto("Pampers Confort RN+ x36un", 1850),
-    new Producto("Huggies Flex RN x34un", 1640),
-    new Producto("Huggies Supreme RN x34un", 2310),
-    new Producto("Babysec RN x20un", 1370)
-];
-
-function calcularCostoTotal(productos = []) {
-    let total = 0;
-    for (const unProducto of productos) {
-        total += unProducto.precio;
-    }
-    return total;
+if (btnComprar1) {
+    btnComprar1.addEventListener('click', function () {
+    alert('Genial, agregaste este producto a tu carrito!', 'success')
+  })
+}
+if (btnComprar2) {
+    btnComprar2.addEventListener('click', function () {
+    alert('Genial, agregaste este producto a tu carrito!', 'success')
+  })
+}
+if (btnComprar3) {
+    btnComprar3.addEventListener('click', function () {
+    alert('Genial, agregaste este producto a tu carrito!', 'success')
+  })
+}
+if (btnComprar4) {
+    btnComprar4.addEventListener('click', function () {
+    alert('Genial, agregaste este producto a tu carrito!', 'success')
+  })
 }
 
-let costoTotal = calcularCostoTotal(misProductos);
 
-//Usando la función de orden superior MAP
-let nombres = misProductos.map((unProducto) => unProducto.nombre);
-alert("Lista de productos que compró el usuario: " + nombres);
+let tabla = document.createElement("div");
+tabla.innerHTML = `
+  <div class="container">
+      <div class"col-12">
+              <table class="table caption-top">
+              <thead>
+                  <tr>
+                      <th scope="col"></th>
+                      <th scope="col"></th>
+                      <th scope="col">Producto</th>
+                      <th scope="col">Cantidad</th>
+                      <th scope="col">Precio</th>
+                      <th scope="col"></th>
+                      <th scope="col"></th>
+                  </tr>
+              </thead>
+              <tbody id="carrito">
+              </tbody >
+              </table>           
+      </div>
+  </div>
+  `;
+document.body.appendChild(tabla);
 
 
-alert("El usuario deberá abonar un total de $" + costoTotal.toFixed(2) + "por la compra de " + misProductos.length + " productos.");git 
+
+
