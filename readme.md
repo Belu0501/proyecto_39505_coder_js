@@ -10,7 +10,7 @@ Primera Entrega Proyecto Final
 ## Documentation
 
 El presente contiene un archivo HTML, con su archivo js, para demostrar lo aprendido hasta ahora en el curso.
-Cuenta con una estructura If con su ciclo For. Para la segunda Pre-Entrega agregué Funciones, Objetos y Arrays y la Función de Orden Superior Map.
+Guardé los productos de mi emprendimiento en el storage como JSON y luego los utilicé para mostrarlos al usuario mediante el uso de DOM. Agregué funciones de eventos en cada botón de compra.
 
 ## Feedback
 

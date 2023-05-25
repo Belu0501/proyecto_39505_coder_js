@@ -16,11 +16,81 @@
 #titulo{
     font-family: 'Edu TAS Beginner', cursive;
     font-size: 40px;
-    color: #17AFF0;
+    color: #8adafc;
+    border-color: #383b3c;
     letter-spacing: 2px;
     text-align: end;
     border: none;
     background: none;
+    font-weight: 900;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Edu TAS Beginner', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.logo {
+    width: 20vw;
+    margin: 2%
+}
+
+.productos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.Item {
+    width: 330px;
+    height: 500px;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    transition: all 0.25s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Item:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.Item img{
+    height: 180px;
+    margin: 10px
+}
+
+.Item h4{
+    font-weight: 300;
+    font-size: 28px;
+    margin: 15px
+}
+
+button{
+    color: white;
+    background-color: #067be9;
+    border: none;
+    margin: 10px;
+    border-radius: 5px;
+    font-size: 24px;
+    padding-left: 5px;
+    padding-right: 5px;
+    display: flex;
+}
+
+button:hover{
+    color: #005bee; 
+    background-color: white;
+    border: solid 1px #016de0;  
 }
 
 h1{
@@ -29,7 +99,7 @@ h1{
     font-style: italic;
     color: #84D3EC;
     letter-spacing: 2px;
-    text-align: center;
+    text-align: end;
     background: #555E61;
     margin-left: 35%;
     margin-right: 35%;
@@ -77,9 +147,11 @@ header{
     display: flex;
     justify-content: center;
     align-content: center;
+    background: linear-gradient(to right, rgb(0, 0, 177), rgb(5, 203, 248));
 }
 
 .nav__list{
     display: flex;
     list-style-type: none;
+    text-align: center;
 }

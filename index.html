@@ -17,33 +17,43 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 
-
-
 <body id="body-index">
 
-    
+    <img src="" alt="">
 
     <header>
         <!--Mi barra de navegación-->
         <nav>
             <a href="#">
-                <img class="col" src="./assets/logo.jpeg" alt="logo-mundo-bajito" width="100px">
+                <img class="logo" src="./assets/logo.jpeg" alt="logo-mundo-bajito" width="100px">
             </a>
             <h1 id="titulo">MUNDO BAJITO</h1>
         </nav>
     </header>
 
     <main>
+        <div id="productos" class="productos"></div>
+        <br>
+        <button id="verCarrito">Ver Carrito</button>
+        
+        <br>
+        <div id="contenedorCarrito" class="contenedorCarrito"></div>
+        <br>
+        <button id="finalizarCompra">Finalizar compra</button>
+        <br>
+
         <div id="liveAlertPlaceholder"></div>
         <div class="container">
-
     </main>
 
-    <script src="./scripts/productos.js"></script>
-    <script src=".//scripts/main.js"> </script>
+    <!--Sweet Alert-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!--Bootstrap-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
+    <!--Mi codigo-->
+    <script src=".//scripts/main.js"> </script>
 </body>
 <footer id="piedepagina">
     <article>
